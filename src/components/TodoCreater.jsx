@@ -1,14 +1,17 @@
 import { useState } from "react"
 
-const TodoCreater = ({ addTodo, currTodos }) => {
+const TodoCreater = ({ setTodos, currTodos }) => {
     const [todoContent, setTodoContent] = useState('');
 
     const onTodoContentChanged = e => setTodoContent(e.target.value);
+    const addTodoClicked = () => {
+        setTodos([...currTodos, todoContent]);
+    }
 
     return (
         <form>
             <input type="text" id="taskConent" name="taskContent" value={todoContent} onChange={onTodoContentChanged}/>
-            <button type="button" onClick={addTodo(currTodos.push(todoContent))}>Add Task</button>
+            <button type="button" onClick={addTodoClicked}>Add Task</button>
         </form>
     )
 }
