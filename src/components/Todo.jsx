@@ -1,6 +1,6 @@
-const Todo = ({ taskContent }) => {
+const Todo = ({ todoContent }) => {
   return (
-    <div>{taskContent}</div>
+    <div className="todo">{todoContent}</div>
   )
 }
 

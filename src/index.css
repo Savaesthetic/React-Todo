@@ -1,1 +1,36 @@
+.app {
+    margin: 1.5em;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.createTodo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo {
+    width: 25%;
+    padding: 12px 12px 12px 12px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
 

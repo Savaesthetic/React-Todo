@@ -1,6 +1,10 @@
-const TodoList = ({ tasks }) => {
+import Todo from "./Todo"
+
+const TodoList = ({ todos }) => {
   return (
-    <div>TodoList</div>
+    <section className="todoList">
+      {todos.map(post => <Todo key={post.id} todoContent={post.body}/>)}
+    </section>
   )
 }
 

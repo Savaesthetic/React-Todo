@@ -5,14 +5,22 @@ const TodoCreater = ({ setTodos, currTodos }) => {
 
     const onTodoContentChanged = e => setTodoContent(e.target.value);
     const addTodoClicked = () => {
-        setTodos([...currTodos, todoContent]);
+        const id = currTodos.length + 1;
+        const newTodo = {
+            "id":id,
+            "body":todoContent
+        };
+        setTodos([...currTodos, newTodo]);
     }
 
     return (
-        <form>
-            <input type="text" id="taskConent" name="taskContent" value={todoContent} onChange={onTodoContentChanged}/>
-            <button type="button" onClick={addTodoClicked}>Add Task</button>
-        </form>
+        <section className="createTodo">
+            <h1>Create Todo</h1>
+            <form>
+                <input type="text" id="taskConent" name="taskContent" value={todoContent} onChange={onTodoContentChanged}/>
+                <button type="button" onClick={addTodoClicked}>Add Task</button>
+            </form>
+        </section>
     )
 }
 
