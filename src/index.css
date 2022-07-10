@@ -25,6 +25,8 @@
 }
 
 .todo {
+    display: grid;
+    grid-template-columns: 90% 10%;
     width: 25%;
     padding: 12px 12px 12px 12px;
     margin-bottom: 6px;
@@ -33,4 +35,10 @@
     border-radius: 15px;
 }
 
+.todo-content {
+    Word-wrap: break-word;
+}
 
+.delete {
+    align-self: center;
+}

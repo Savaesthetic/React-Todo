@@ -1,9 +1,9 @@
 import Todo from "./Todo"
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, deleteTodo }) => {
   return (
     <section className="todoList">
-      {todos.map(post => <Todo key={post.id} todoContent={post.body}/>)}
+      {todos.map(post => <Todo key={post.id} todoContent={post} deleteTodo={deleteTodo} />)}
     </section>
   )
 }
