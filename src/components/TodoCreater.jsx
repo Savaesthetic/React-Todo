@@ -13,6 +13,8 @@ const TodoCreater = ({ setTodos, currTodos }) => {
             "body": todoContent
         };
         setTodos([...currTodos, newTodo]);
+
+        setTodoContent('');
     }
 
     return (
