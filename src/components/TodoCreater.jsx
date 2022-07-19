@@ -5,7 +5,9 @@ const TodoCreater = ({ setTodos, currTodos }) => {
     const [todoContent, setTodoContent] = useState('');
 
     const onTodoContentChanged = e => setTodoContent(e.target.value);
-    const addTodoClicked = () => {
+    const addTodoClicked = (e) => {
+        e.preventDefault();
+
         const newTodo = {
             "id": nanoid(),
             "body": todoContent
@@ -16,9 +18,9 @@ const TodoCreater = ({ setTodos, currTodos }) => {
     return (
         <section className="createTodo">
             <h1>Create Todo</h1>
-            <form>
+            <form onSubmit={addTodoClicked}>
                 <input type="text" id="taskContent" name="taskContent" value={todoContent} onChange={onTodoContentChanged}/>
-                <button type="button" onClick={addTodoClicked}>Add Task</button>
+                <button type="submit">Add Task</button>
             </form>
         </section>
     )
